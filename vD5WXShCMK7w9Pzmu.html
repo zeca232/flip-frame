@@ -1,0 +1,499 @@
+<html>
+<head>
+<base href="/?genre=comedy&style=manga&narrative=thirdperson&frames=40">
+<title>FlipFrame - The Hilarious Heist: A Manga Comedy</title>
+<style>
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #fafafa;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 1px solid #ddd;
+}
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+}
+nav a {
+    color: #333;
+    text-decoration: none;
+    margin-left: 20px;
+    transition: color 0.3s ease;
+}
+nav a:hover {
+    color: #e91e63;
+}
+.flip-video {
+    width: 100%;
+    max-width: 800px;
+    height: 450px;
+    margin: 40px auto;
+    position: relative;
+    overflow: hidden;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.flip-video img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+.play-pause, .next-frame, .prev-frame, .speed-control {
+    background-color: #e91e63;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+.play-pause:hover, .next-frame:hover, .prev-frame:hover, .speed-control:hover {
+    background-color: #d81b60;
+}
+.frame-counter, .speed-display {
+    font-size: 18px;
+    margin: 0 20px;
+    color: #333;
+}
+.video-info {
+    text-align: center;
+    margin-top: 20px;
+}
+.video-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+.video-description {
+    font-size: 16px;
+    color: #666;
+}
+.subtitle {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: #fff;
+    font-size: 18px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+}
+.selector-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+.selector {
+    margin: 0 10px 20px;
+}
+.selector-label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+.selector select, .selector input {
+    background-color: #fff;
+    color: #333;
+    border: 1px solid #ddd;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+.selector select:focus, .selector input:focus {
+    outline: none;
+    border-color: #e91e63;
+}
+#generate-button {
+    display: block;
+    margin: 20px auto;
+    background-color: #e91e63;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+#generate-button:hover {
+    background-color: #d81b60;
+}
+</style>
+</head>
+<body>
+<div class="container">
+    <header>
+        <div class="logo">FlipFrame</div>
+        <nav>
+            <a href="https://flipframe.com/explore">Explore</a>
+            <a href="https://flipframe.com/create">Create</a>
+            <a href="https://flipframe.com/profile">Profile</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="flip-video">
+            <img alt="A bustling bank lobby with customers and tellers, manga style" src="hilarious_heist_manga_1.jpg" data-frame="1">
+            <img alt="Three clumsy robbers stumbling through the bank's revolving door, manga style" src="hilarious_heist_manga_2.jpg" data-frame="2">
+            <img alt="The robbers accidentally dropping their bag of tools, spilling comically oversized fake mustaches, manga style" src="hilarious_heist_manga_3.jpg" data-frame="3">
+            <img alt="A security guard slipping on a banana peel dropped by one of the robbers, manga style" src="hilarious_heist_manga_4.jpg" data-frame="4">
+            <img alt="The robbers trying to crack a safe with a stethoscope, looking confused, manga style" src="hilarious_heist_manga_5.jpg" data-frame="5">
+            <img alt="A robber getting his fake beard caught in a closing vault door, manga style" src="hilarious_heist_manga_6.jpg" data-frame="6">
+            <img alt="The bank manager chasing the robbers with a comically large net, manga style" src="hilarious_heist_manga_7.jpg" data-frame="7">
+            <img alt="Robbers hiding in plain sight, poorly disguised as potted plants, manga style" src="hilarious_heist_manga_8.jpg" data-frame="8">
+            <img alt="A robber accidentally setting off a confetti cannon instead of a smoke bomb, manga style" src="hilarious_heist_manga_9.jpg" data-frame="9">
+            <img alt="The getaway car turning out to be a clown car, packed with robbers, manga style" src="hilarious_heist_manga_10.jpg" data-frame="10">
+            <img alt="Robbers trying to escape on pogo sticks through heavy traffic, manga style" src="hilarious_heist_manga_11.jpg" data-frame="11">
+            <img alt="A police officer eating a donut, oblivious to the chaos behind him, manga style" src="hilarious_heist_manga_12.jpg" data-frame="12">
+            <img alt="The robbers accidentally entering a costume party, blending in perfectly, manga style" src="hilarious_heist_manga_13.jpg" data-frame="13">
+            <img alt="A robber getting tangled in streamers while trying to climb out a window, manga style" src="hilarious_heist_manga_14.jpg" data-frame="14">
+            <img alt="The bank's dye pack exploding, covering the robbers in bright pink dye, manga style" src="hilarious_heist_manga_15.jpg" data-frame="15">
+            <img alt="Robbers trying to swim across a fountain, weighed down by coins, manga style" src="hilarious_heist_manga_16.jpg" data-frame="16">
+            <img alt="A robber accidentally handcuffing himself to a statue, manga style" src="hilarious_heist_manga_17.jpg" data-frame="17">
+            <img alt="The getaway driver stuck in a comically small parking space, manga style" src="hilarious_heist_manga_18.jpg" data-frame="18">
+            <img alt="Robbers disguising themselves with face masks made from dollar bills, manga style" src="hilarious_heist_manga_19.jpg" data-frame="19">
+            <img alt="A robber tripping over his own oversized clown shoes, spilling stolen money, manga style" src="hilarious_heist_manga_20.jpg" data-frame="20">
+            <img alt="The robbers accidentally entering a police station thinking it's their hideout, manga style" src="hilarious_heist_manga_21.jpg" data-frame="21">
+            <img alt="A robber's pants falling down while climbing a fence, revealing colorful boxers, manga style" src="hilarious_heist_manga_22.jpg" data-frame="22">
+            <img alt="The robbers trying to blend in at a mime convention, failing miserably, manga style" src="hilarious_heist_manga_23.jpg" data-frame="23">
+            <img alt="A robber getting stuck in a revolving door with armfuls of cash, manga style" src="hilarious_heist_manga_24.jpg" data-frame="24">
+            <img alt="The robbers accidentally joining a marathon, still carrying bags of money, manga style" src="hilarious_heist_manga_25.jpg" data-frame="25">
+            <img alt="A robber's fake mustache flying off during a dramatic speech, manga style" src="hilarious_heist_manga_26.jpg" data-frame="26">
+            <img alt="The robbers trying to stuff themselves into a tiny car trunk, manga style" src="hilarious_heist_manga_27.jpg" data-frame="27">
+            <img alt="A robber being chased by a group of angry chihuahuas, manga style" src="hilarious_heist_manga_28.jpg" data-frame="28">
+            <img alt="The robbers disguising their getaway car as an ice cream truck, manga style" src="hilarious_heist_manga_29.jpg" data-frame="29">
+            <img alt="A robber accidentally activating the bank's sprinkler system, creating chaos, manga style" src="hilarious_heist_manga_30.jpg" data-frame="30">
+            <img alt="The robbers getting trapped in a ball pit at a nearby playground, manga style" src="hilarious_heist_manga_31.jpg" data-frame="31">
+            <img alt="A robber's ski mask shrinking in the rain, revealing his face, manga style" src="hilarious_heist_manga_32.jpg" data-frame="32">
+            <img alt="The robbers trying to escape on a tandem bicycle, wobbling comically, manga style" src="hilarious_heist_manga_33.jpg" data-frame="33">
+            <img alt="A robber accidentally gluing his hand to the bank vault, manga style" src="hilarious_heist_manga_34.jpg" data-frame="34">
+            <img alt="The robbers being chased by a group of determined senior citizens, manga style" src="hilarious_heist_manga_35.jpg" data-frame="35">
+            <img alt="A robber getting caught in a giant butterfly net wielded by a child, manga style" src="hilarious_heist_manga_36.jpg" data-frame="36">
+            <img alt="The robbers realizing they've stolen a bag full of monopoly money, manga style" src="hilarious_heist_manga_37.jpg" data-frame="37">
+            <img alt="A robber accidentally setting off a confetti cannon during their arrest, manga style" src="hilarious_heist_manga_38.jpg" data-frame="38">
+            <img alt="The robbers lined up for a hilarious police mugshot, still in ridiculous disguises, manga style" src="hilarious_heist_manga_39.jpg" data-frame="39">
+            <img alt="A final scene showing the robbers starting a comedy act in prison, manga style" src="hilarious_heist_manga_40.jpg" data-frame="40">
+            <div class="subtitle"></div>
+        </div>
+        
+        <div class="controls">
+            <button class="prev-frame">◀◀</button>
+            <button class="play-pause">▶</button>
+            <button class="next-frame">▶▶</button>
+            <button class="speed-control" data-speed="1">1x Speed</button>
+            <div class="frame-counter">Frame: <span id="current-frame">1</span>/40</div>
+            <div class="speed-display">Speed: <span id="current-speed">1x</span></div>
+        </div>
+
+        <div class="video-info">
+            <div class="video-title">The Hilarious Heist: A Manga Comedy</div>
+            <div class="video-description">Join the world's most incompetent bank robbers as they bumble their way through a hilariously disastrous heist in this manga-style comedy adventure.</div>
+        </div>
+    </main>
+
+    <div class="selector-container">
+        <div class="selector">
+            <label for="genre-select" class="selector-label">Genre:</label>
+            <select id="genre-select">
+                <option value="">Select Genre</option>
+                <option value="drama">Drama</option>
+                <option value="comedy" selected>Comedy</option>
+                <option value="action">Action</option>
+                <option value="thriller">Thriller</option>
+                <option value="romance">Romance</option>
+                <option value="scifi">Sci-Fi</option>
+                <option value="fantasy">Fantasy</option>
+                <option value="horror">Horror</option>
+                <option value="mystery">Mystery</option>
+                <option value="other">Other</option>
+            </select>
+            <input type="text" id="genre-custom" placeholder="Enter custom genre" style="display: none; margin-top: 5px;">
+        </div>
+        <div class="selector">
+            <label for="style-select" class="selector-label">Artistic Style:</label>
+            <select id="style-select">
+                <option value="">Select Style</option>
+                <option value="photorealistic">Photorealistic</option>
+                <option value="cartoon">Cartoon</option>
+                <option value="manga" selected>Manga</option>
+                <option value="impressionist">Impressionist</option>
+                <option value="surrealist">Surrealist</option>
+                <option value="pixelart">Pixel Art</option>
+                <option value="other">Other</option>
+            </select>
+            <input type="text" id="style-custom" placeholder="Enter custom style" style="display: none; margin-top: 5px;">
+        </div>
+        <div class="selector">
+            <label for="narrative-select" class="selector-label">Narrative Style:</label>
+            <select id="narrative-select">
+                <option value="">Select Narrative</option>
+                <option value="firstperson">First Person</option>
+                <option value="thirdperson" selected>Third Person</option>
+                <option value="omniscient">Omniscient</option>
+                <option value="epistolary">Epistolary</option>
+                <option value="streamofconsciousness">Stream of Consciousness</option>
+                <option value="other">Other</option>
+            </select>
+            <input type="text" id="narrative-custom" placeholder="Enter custom narrative style" style="display: none; margin-top: 5px;">
+        </div>
+        <div class="selector">
+            <label for="frame-count-select" class="selector-label">Number of Frames:</label>
+            <select id="frame-count-select">
+                <option value="">Select Frame Count</option>
+                <!-- Options from 1 to 40 -->
+            </select>
+            <input type="number" id="frames-custom" placeholder="Enter number of frames" min="1" max="100" style="display: none; margin-top: 5px;">
+        </div>
+    </div>
+
+    <button id="generate-button">Generate New Story</button>
+</div>
+
+<script src="https://unpkg.com/htmx.org@1.6.1"></script>
+<script>
+let currentFrame = 1;
+let isPlaying = false;
+let playInterval;
+let speed = 1;
+let totalFrames = 40;
+
+const frames = document.querySelectorAll('.flip-video img');
+const playPauseButton = document.querySelector('.play-pause');
+const nextFrameButton = document.querySelector('.next-frame');
+const prevFrameButton = document.querySelector('.prev-frame');
+const speedControl = document.querySelector('.speed-control');
+const frameCounter = document.getElementById('current-frame');
+const speedDisplay = document.getElementById('current-speed');
+const subtitle = document.querySelector('.subtitle');
+
+const subtitles = [
+    "Welcome to First National Bank, where an ordinary day is about to turn extraordinary.",
+    "Meet our 'brilliant' robbers: Kenji, Taro, and Hiroshi, making their grand entrance... sort of.",
+    "Oops! There go the tools of the trade. Is that a rubber chicken?",
+    "Watch your step! Our security guard takes an unplanned banana break.",
+    "Cracking the safe 101: Step 1 - Figure out which end of the stethoscope to use.",
+    "Note to self: Facial hair and vault doors don't mix.",
+    "It's the world's slowest chase scene, featuring one determined manager and his trusty net.",
+    "They said blend in with the surroundings. They didn't specify how.",
+    "Smoke bomb? Confetti cannon? Same difference, right?",
+    "Behold, the getaway vehicle! It's no clown car... Oh wait, it is.",
+    "Who needs a car when you have the power of the pogo?",
+    "Meanwhile, Officer Donut remains blissfully unaware of the 'crime of the century'.",
+    "The robbers accidentally crash the bank's annual costume party. Best disguises ever!",
+    "Streamers: 1, Robber: 0. Who knew escaping could be so festive?",
+    "Pink is the new black in bank robber fashion this season.",
+    "Making it rain... with themselves. These robbers are really cleaning up!",
+    "He always wanted to be joined at the hip with a great work of art.",
+    "Parallel parking: the true nemesis of any getaway driver.",
+    "When you run out of ski masks, improvise with cold, hard cash.",
+    "Crime doesn't pay, but it sure can make you trip.",
+    "In their defense, the police station does look a lot like their hideout... from the inside.",
+    "The latest in burglar fashion: pants optional.",
+    "Silence is golden, unless you're these guys at a mime convention.",
+    "Round and round he goes, where he stops, nobody knows!",
+    "They're running for the money... literally.",
+    "And the award for 'Most Dramatic Mustache Fail' goes to...",
+    "Tetris skills don't always translate to real-life trunk packing.",
+    "Who let the dogs out? And why are they so angry?",
+    "Nothing says 'inconspicuous' like an ice cream truck full of bank robbers.",
+    "It's raining men... and money... and general chaos.",
+    "Ball pit: Where dreams of escape go to die.",
+    "Ski masks and rainstorms: a recipe for instant reveal.",
+    "Tour de Farce: The getaway edition.",
+    "Sticky situation? More like a stuck-up situation.",
+    "Never underestimate the power of determined retirees.",
+    "Caught by a kid with a butterfly net. That's going on his college application.",
+    "All that glitters is not gold... sometimes it's just colorful play money.",
+    "Going out with a bang... and a lot of sparkle.",
+    "Crime doesn't pay, but it does make for a great photo op.",
+    "And so, our 'master criminals' found their true calling... making license plates and audiences laugh."
+];
+
+function showFrame(frameNumber) {
+    frames.forEach(frame => frame.style.opacity = '0');
+    const frameToShow = document.querySelector(`.flip-video img[data-frame="${frameNumber}"]`);
+    if (frameToShow) {
+        frameToShow.style.opacity = '1';
+        frameCounter.textContent = frameNumber;
+        subtitle.textContent = subtitles[frameNumber - 1];
+        subtitle.style.opacity = '1';
+    }
+}
+
+function nextFrame() {
+    currentFrame = currentFrame % totalFrames + 1;
+    showFrame(currentFrame);
+}
+
+function prevFrame() {
+    currentFrame = (currentFrame - 2 + totalFrames) % totalFrames + 1;
+    showFrame(currentFrame);
+}
+
+function togglePlayPause() {
+    isPlaying = !isPlaying;
+    if (isPlaying) {
+        playPauseButton.textContent = '❚❚';
+        playInterval = setInterval(nextFrame, 3000 / speed);
+    } else {
+        playPauseButton.textContent = '▶';
+        clearInterval(playInterval);
+    }
+}
+
+function changeSpeed() {
+    speed = speed === 1 ? 1.5 : speed === 1.5 ? 2 : 1;
+    speedControl.textContent = `${speed}x Speed`;
+    speedDisplay.textContent = `${speed}x`;
+    if (isPlaying) {
+        clearInterval(playInterval);
+        playInterval = setInterval(nextFrame, 3000 / speed);
+    }
+}
+
+playPauseButton.addEventListener('click', togglePlayPause);
+nextFrameButton.addEventListener('click', () => {
+    if (isPlaying) togglePlayPause();
+    nextFrame();
+});
+prevFrameButton.addEventListener('click', () => {
+    if (isPlaying) togglePlayPause();
+    prevFrame();
+});
+speedControl.addEventListener('click', changeSpeed);
+
+// Show or hide custom input fields based on selection
+document.getElementById('genre-select').addEventListener('change', function() {
+    const genreCustom = document.getElementById('genre-custom');
+    genreCustom.style.display = this.value === 'other' ? 'block' : 'none';
+});
+
+document.getElementById('style-select').addEventListener('change', function() {
+    const styleCustom = document.getElementById('style-custom');
+    styleCustom.style.display = this.value === 'other' ? 'block' : 'none';
+});
+
+document.getElementById('narrative-select').addEventListener('change', function() {
+    const narrativeCustom = document.getElementById('narrative-custom');
+    narrativeCustom.style.display = this.value === 'other' ? 'block' : 'none';
+});
+
+document.getElementById('frame-count-select').addEventListener('change', function() {
+    const framesCustom = document.getElementById('frames-custom');
+    framesCustom.style.display = this.value === 'other' ? 'block' : 'none';
+});
+
+function reloadWithNewStory() {
+    let genre = document.getElementById('genre-select').value;
+    let style = document.getElementById('style-select').value;
+    let narrative = document.getElementById('narrative-select').value;
+    let frameCount = document.getElementById('frame-count-select').value;
+
+    if (genre === 'other') {
+        genre = document.getElementById('genre-custom').value.trim();
+    }
+    if (style === 'other') {
+        style = document.getElementById('style-custom').value.trim();
+    }
+    if (narrative === 'other') {
+        narrative = document.getElementById('narrative-custom').value.trim();
+    }
+    if (frameCount === 'other') {
+        frameCount = document.getElementById('frames-custom').value.trim();
+    }
+
+    const params = new URLSearchParams();
+    if (genre) params.append('genre', genre);
+    if (style) params.append('style', style);
+    if (narrative) params.append('narrative', narrative);
+    if (frameCount) params.append('frames', frameCount);
+
+    window.location.href = window.location.pathname + '?' + params.toString();
+}
+
+document.getElementById('generate-button').addEventListener('click', reloadWithNewStory);
+
+function updateFrameCountOptions() {
+    const frameCountSelect = document.getElementById('frame-count-select');
+    frameCountSelect.innerHTML = '<option value="">Select Frame Count</option>';
+    for (let i = 1; i <= 40; i++) {
+        const option = document.createElement('option');
+        option.value = i;
+        option.textContent = i;
+        if (i === 40) option.selected = true;
+        frameCountSelect.appendChild(option);
+    }
+}
+
+function updateStoryFromParams() {
+    const params = new URLSearchParams(window.location.search);
+    const genre = params.get('genre');
+    const style = params.get('style');
+    const narrative = params.get('narrative');
+    const framesParam = params.get('frames');
+
+    if (genre) document.getElementById('genre-select').value = genre;
+    if (style) document.getElementById('style-select').value = style;
+    if (narrative) document.getElementById('narrative-select').value = narrative;
+    if (framesParam) document.getElementById('frame-count-select').value = framesParam;
+
+    if (genre || style || narrative || framesParam) {
+        // Update story details based on parameters
+        const videoTitle = document.querySelector('.video-title');
+        const videoDescription = document.querySelector('.video-description');
+
+        const genreText = genre.charAt(0).toUpperCase() + genre.slice(1);
+        const styleText = style.charAt(0).toUpperCase() + style.slice(1);
+
+        videoTitle.textContent = `The Hilarious Heist: A ${styleText} ${genreText}`;
+        videoDescription.textContent = `Join the world's most incompetent bank robbers as they bumble their way through a hilariously disastrous heist in this ${style} ${genre} adventure.`;
+
+        // Update frame count
+        totalFrames = parseInt(framesParam) || 40;
+        document.querySelector('.frame-counter').innerHTML = `Frame: <span id="current-frame">${currentFrame}</span>/${totalFrames}`;
+    }
+}
+
+window.addEventListener('load', () => {
+    updateFrameCountOptions();
+    updateStoryFromParams();
+    showFrame(currentFrame);
+});
+</script>
+
+</body>
+</html>
